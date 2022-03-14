@@ -1,0 +1,16 @@
+main:
+  "nb": 512  # nbatch
+  "lr": 0.001 # learning_rate
+  "L": 256 # L_type_max
+  "S": 128 # S_triplet_max
+  "FB": true # use FB15k or YAGO
+  "np": "all_min"
+  "bm": true # balance_mean
+  "bmr": 0.5 # balance_mean rate
+other:
+  "not_train": false
+  "evaluator_time": 10
+  "log_folder": "FB-run"
+  "log_tag": "Full-bm"
+  "cuda": "0"
+  "fixed_transE": "./data/embeddings/fb-checkpoint-999.tar"

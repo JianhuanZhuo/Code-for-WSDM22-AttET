@@ -1,0 +1,66 @@
+main:
+  "nb": 16  # nbatch
+  "lr": 0.001 # learning_rate
+  "L": 128 # L_type_max
+  "S": 512 # S_triplet_max
+  "mlp": true # mlp for e2t assemble
+  "dp": 0.5 # dropout for e2t assemble
+  "ep": 1000
+  "bn": false # batch normalize
+  "dr": true # dual learning rate
+  "rd": 5.0 # rate_dual
+  "FB": true # use FB15k or YAGO
+other:
+  "ma": false # mean_att
+  "not_train": false
+  "evaluator_time": 10
+  "log_folder": "exps"
+  "log_tag": "EE-att-e"
+  "cuda": "0"
+  "fixed_transE": "./yago-fixed_transE/checkpoint-999.tar"
+  "fr": false # full relation evaluation
+  "xmlp": false # mlp for e2t assemble
+  "ne": true # model_e2t normalizeEmbedding
+  "rp": true # relation_padding
+  "da": false # disable_attention
+  "dl": false # disable_local
+  "np": "all_min"
+  "sc": "Fix"
+  "ed": 200 # entity_dim
+  "ak": false # att_key
+  "rd": 200 # entity_dim
+  "td": 200
+  "seed": "random"
+  "disable_e2t": false # just check evaluation
+  "warmup_step": 1
+  "margin": 1
+  "norm": 2
+  "warmup": 0.1
+  "log": true
+  "data_loc": "./"
+  "pt": false
+  "pt_mask_local": false
+  "pt_mask_attention": false
+  "wd": 0  # weight_decay
+  "er": false
+  "rc": false # add reconstruction module
+  "bm": false # balance_mean
+  "bmr": 0.9 # balance_mean rate
+maps:
+  "train_e_and_r": er
+  "part_test": pt
+  "rate_dual": rd
+  "epochs": ep
+  "nbatch": nb
+  "learning_rate": lr
+  "entity_dim": ed
+  "type_dim": td
+  "scheduler": sc
+  "np_compare": np
+  "disable_attention": da
+  "disable_local": dl
+  "L_type_max": L
+  "S_triplet_max": S
+  "relation_padding": rp
+  "att_key": ak
+  "mean_att": ma

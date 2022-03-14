@@ -1,0 +1,20 @@
+main:
+  # best：12-18-20-45-25-glr-FBN-L32-S128-drN-ep1000-lr0.01-mlpY-nb512-rd1.0
+  "nb": 512  # nbatch
+  "lr": 0.005 # learning_rate
+  "dr": false # dual learning rate
+  "rd": 1.0 # rate_dual
+  "L": 256 # L_type_max
+  "S": 128 # S_triplet_max
+  "mlp": false # mlp for e2t assemble
+  "ep": 1000
+  "FB": false # use FB15k or YAGO
+  "pt": false # part test
+  "bm": true # balance_mean
+  "bmr": 0.95 # balance_mean rate
+other:
+  "not_train": false
+  "log_folder": "YAGO-run/eval"
+  "log_tag": "full"
+  "cuda": "0"
+  "fixed_transE": "./data/embeddings/yago-checkpoint-999.tar"

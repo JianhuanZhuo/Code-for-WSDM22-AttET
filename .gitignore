@@ -1,0 +1,5 @@
+.idea
+data/embeddings
+data/FB15K
+data/YAGO
+git_record.txt
